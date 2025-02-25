@@ -17,7 +17,6 @@ function importExcel() {
   while (files.hasNext()) {
     let excelFile = files.next();
     ss.toast(`Processing ${excelFile.getName()}`,"STATUS",-1);
-    let excelFileId = excelFile.getId();
     let blob = excelFile.getBlob();
     let resource = {
       name: excelFile.getName().replace(/.xlsx?/, ""),
